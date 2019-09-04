@@ -1,0 +1,725 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0061)http://swjx.scu.edu.cn/moodle/mod/assignment/view.php?id=3927 -->
+<HTML lang=zh-cn dir=ltr xml:lang="zh-cn" 
+xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>系统级编程(System Level Programming) - 舒莉: 作业: Lab02: Data Lab</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8"><LINK 
+href="系统级编程(System Level Programming) - 舒莉 作业 Lab02 Data Lab.files/styles.css" 
+type=text/css rel=stylesheet><LINK 
+href="C:\Documents and Settings\计算机学院专业实验室\桌面\系统级编程3\2\系统级编程(System Level Programming) - 舒莉 作业 Lab02 Data Lab.files\styles(1).css" 
+type=text/css rel=stylesheet><!--[if IE 7]>
+    <link rel="stylesheet" type="text/css" href="http://swjx.scu.edu.cn/moodle/theme/standard/styles_ie7.css" />
+<![endif]--><!--[if IE 6]><LINK 
+href="系统级编程(System Level Programming) - 舒莉 作业 Lab02 Data Lab.files/styles_ie6.css" 
+type=text/css rel=stylesheet><![endif]-->
+<META 
+content="四川大学·国家示范性软件学院, 系统级编程(System Level Programming) - 舒莉: 作业: Lab02: Data Lab " 
+name=keywords><!--<style type="text/css">/*<![CDATA[*/ body{behavior:url(http://swjx.scu.edu.cn/moodle/lib/csshover.htc);} /*]]>*/</style>-->
+<SCRIPT 
+src="系统级编程(System Level Programming) - 舒莉 作业 Lab02 Data Lab.files/javascript-static.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT 
+src="系统级编程(System Level Programming) - 舒莉 作业 Lab02 Data Lab.files/javascript-mod.php" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT 
+src="系统级编程(System Level Programming) - 舒莉 作业 Lab02 Data Lab.files/overlib.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT 
+src="系统级编程(System Level Programming) - 舒莉 作业 Lab02 Data Lab.files/overlib_cssstyle.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT 
+src="系统级编程(System Level Programming) - 舒莉 作业 Lab02 Data Lab.files/cookies.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT 
+src="系统级编程(System Level Programming) - 舒莉 作业 Lab02 Data Lab.files/ufo.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT 
+src="系统级编程(System Level Programming) - 舒莉 作业 Lab02 Data Lab.files/dropdown.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT defer type=text/javascript>
+//<![CDATA[
+setTimeout('fix_column_widths()', 20);
+//]]>
+</SCRIPT>
+
+<SCRIPT type=text/javascript>
+//<![CDATA[
+function openpopup(url, name, options, fullscreen) {
+    var fullurl = "http://swjx.scu.edu.cn/moodle" + url;
+    var windowobj = window.open(fullurl, name, options);
+    if (!windowobj) {
+        return true;
+    }
+    if (fullscreen) {
+        windowobj.moveTo(0, 0);
+        windowobj.resizeTo(screen.availWidth, screen.availHeight);
+    }
+    windowobj.focus();
+    return false;
+}
+
+function uncheckall() {
+    var inputs = document.getElementsByTagName('input');
+    for(var i = 0; i < inputs.length; i++) {
+        inputs[i].checked = false;
+    }
+}
+
+function checkall() {
+    var inputs = document.getElementsByTagName('input');
+    for(var i = 0; i < inputs.length; i++) {
+        inputs[i].checked = true;
+    }
+}
+
+function inserttext(text) {
+  text = ' ' + text + ' ';
+  if ( opener.document.forms['theform'].message.createTextRange && opener.document.forms['theform'].message.caretPos) {
+    var caretPos = opener.document.forms['theform'].message.caretPos;
+    caretPos.text = caretPos.text.charAt(caretPos.text.length - 1) == ' ' ? text + ' ' : text;
+  } else {
+    opener.document.forms['theform'].message.value  += text;
+  }
+  opener.document.forms['theform'].message.focus();
+}
+
+function getElementsByClassName(oElm, strTagName, oClassNames){
+	var arrElements = (strTagName == "*" && oElm.all)? oElm.all : oElm.getElementsByTagName(strTagName);
+	var arrReturnElements = new Array();
+	var arrRegExpClassNames = new Array();
+	if(typeof oClassNames == "object"){
+		for(var i=0; i<oClassNames.length; i++){
+			arrRegExpClassNames.push(new RegExp("(^|\\s)" + oClassNames[i].replace(/\-/g, "\\-") + "(\\s|$)"));
+		}
+	}
+	else{
+		arrRegExpClassNames.push(new RegExp("(^|\\s)" + oClassNames.replace(/\-/g, "\\-") + "(\\s|$)"));
+	}
+	var oElement;
+	var bMatchesAll;
+	for(var j=0; j<arrElements.length; j++){
+		oElement = arrElements[j];
+		bMatchesAll = true;
+		for(var k=0; k<arrRegExpClassNames.length; k++){
+			if(!arrRegExpClassNames[k].test(oElement.className)){
+				bMatchesAll = false;
+				break;
+			}
+		}
+		if(bMatchesAll){
+			arrReturnElements.push(oElement);
+		}
+	}
+	return (arrReturnElements)
+}
+//]]>
+</SCRIPT>
+
+<META content="MSHTML 6.00.2900.3698" name=GENERATOR></HEAD>
+<BODY class="mod-assignment course-49 dir-ltr lang-zh_cn_utf8" 
+id=mod-assignment-view>
+<DIV id=page>
+<DIV class=" clearfix" id=header-home>
+<H1 class=headermain><IMG alt=四川大学·国家示范性软件学院 
+src="系统级编程(System Level Programming) - 舒莉 作业 Lab02 Data Lab.files/toplogo.gif"></H1>
+<DIV class=headermenu>
+<DIV class=navigation>
+<UL>
+  <LI>
+  <FORM onclick="this.target='_top';" 
+  action=http://swjx.scu.edu.cn/moodle/mod/resource/view.php>
+  <FIELDSET class=invisiblefieldset><INPUT type=hidden value=1485 
+  name=id><BUTTON title=前一个活动 type=submit><SPAN class="arrow ">◄</SPAN><SPAN 
+  class="accesshide ">&nbsp;前一个活动</SPAN></BUTTON></FIELDSET></FORM>
+  <LI>
+  <FORM class=popupform id=navmenupopup 
+  action=http://swjx.scu.edu.cn/moodle/course/jumpto.php method=get>
+  <DIV><SELECT id=navmenupopup_jump onfocus="initSelect('navmenupopup',self)" 
+  name=jump> <OPTION 
+    style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/forum/icon.gif)" 
+    value=http://swjx.scu.edu.cn/moodle/mod/forum/view.php?id=1214>新闻讨论区</OPTION> 
+    <OPTION 
+    style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/forum/icon.gif)" 
+    value=http://swjx.scu.edu.cn/moodle/mod/forum/view.php?id=1215>公众讨论区</OPTION> 
+    <OPTION 
+    style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/forum/icon.gif)" 
+    value=http://swjx.scu.edu.cn/moodle/mod/forum/view.php?id=1221>请假贴</OPTION> 
+    <OPTION 
+    style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/chat/icon.gif)" 
+    value=http://swjx.scu.edu.cn/moodle/mod/chat/view.php?id=1335>即时答疑</OPTION> 
+    <OPTGROUP label="主题 1"> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=1270>SSD6.chm</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=3912>ComputerSystem-A 
+      Programer Perspective.pdf</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=3923>slp-week01-1.ppt</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=3922>slp-week01-0.ppt</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=3926>slp-week01_lab.ppt</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/quiz/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/quiz/view.php?id=1243>multiple-choice 
+      quiz 1</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/assignment/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/assignment/view.php?id=1285>Lab01: 
+      Using VC/C++ IDE</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=4952>同学讲解week01Lab.rar</OPTION> 
+    </OPTGROUP> <OPTGROUP label="主题 2"> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=1281>slp-week02-1.ppt</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=1282>slp-week02_lab.ppt</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/quiz/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/quiz/view.php?id=1299>Multiple 
+      Choice Quiz 2</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/assignment/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/assignment/view.php?id=1300>IEEE-754 
+      encoding of floating-point numbers</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=1485>lab2 
+      solutions</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/assignment/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/assignment/view.php?id=3927 
+      selected>跳至...</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=4953>同学讲解week02Lab.rar</OPTION> 
+    </OPTGROUP> <OPTGROUP label="&#13;&#10;"> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=1499>slp-week03.ppt</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/assignment/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/assignment/view.php?id=1501>Lab03: 
+      Assembly Language</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/quiz/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/quiz/view.php?id=1502>Multiple 
+      Choice Quiz 3</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=1651>lab3 
+      solutions</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=1661>x86_BootLoader_Lab_solution.ppt</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=1504>The Art 
+      of Assembly Language Programming</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=4068>Assembly 
+      Language for x86 Processors 6th - Kip Irvine</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=1525>汇编 - 
+      伪指令</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=4954>同学讲解week03Lab.rar</OPTION> 
+    </OPTGROUP> <OPTGROUP label="主题 4"> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=1656>slp-week4-20110921.ppt</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/quiz/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/quiz/view.php?id=1658>Multiple 
+      Choice Quiz 4</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/assignment/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/assignment/view.php?id=1662>Lab04. 
+      Structured Data Representation</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=4955>同学讲解week04Lab.rar</OPTION> 
+    </OPTGROUP> <OPTGROUP label="主题 5"> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=1723>slp-week05-1.ppt</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/quiz/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/quiz/view.php?id=1727>Multiple 
+      Choice Quiz 5</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/assignment/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/assignment/view.php?id=4234>Lab05. 
+      Function Call and Return - Part 1</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/assignment/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/assignment/view.php?id=1739>Lab05: 
+      Function Call and Return - Part 2</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=1977>Bufbom 
+      Lab Solution</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=1980>Decode_Lab_Solution.ppt</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=2009>/key3key4讲解.ppt</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=1726>天书夜读.pdf</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=4956>同学讲解week05Lab.rar</OPTION> 
+    </OPTGROUP> <OPTGROUP label="主题 6"> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=1861>slp-week06-1.ppt</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/quiz/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/quiz/view.php?id=1839>Multiple 
+      Choice Quiz 6</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/assignment/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/assignment/view.php?id=1863>Lab06: 
+      Debugging Malloc Lab</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=2116>Debugging 
+      Malloc Lab Solution</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=4957>同学讲解week06Lab.rar</OPTION> 
+    </OPTGROUP> <OPTGROUP label="主题 7"> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=1983>slp-week07.ppt</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/quiz/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/quiz/view.php?id=1851>Multiple 
+      Choice Quiz 7</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/assignment/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/assignment/view.php?id=1991>Lab07: 
+      Memory Debug Lab</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=1987>高质量C_编程指南.pdf</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=2104>c语言深度剖析.pdf</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=2103>lab2 
+      solutions 普通文件</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=4337>美国版程序员面试宝典</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=4338>浪潮之颠</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=4395>VC 
+      Debug版的malloc/free源代码</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=4958>同学讲解week07Lab.zip</OPTION> 
+    </OPTGROUP> <OPTGROUP label="主题 8"> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=4407>slp-week08.ppt</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/assignment/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/assignment/view.php?id=2117>Lab08: 
+      Garbage Collector Implementation</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/quiz/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/quiz/view.php?id=1858>Multiple 
+      Choice Quiz 8</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/assignment/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/assignment/view.php?id=4406>Lab08 
+      - Part 2</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=2115>otspot-gc.pdf</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=2201>KVM_GC优化技术的研究与实现.pdf</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=4959>week8/同学讲解week08Lab.rar</OPTION> 
+    </OPTGROUP> <OPTGROUP label="主题 9"> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=2197>slp-week09.ppt</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/assignment/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/assignment/view.php?id=2199>Lab09: 
+      Performance Measurement</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/quiz/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/quiz/view.php?id=2200>Multiple 
+      Choice Quiz 9</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=4960>同学讲解week09Lab.rar</OPTION> 
+    </OPTGROUP> <OPTGROUP label="主题 10"> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=2351>slp_week10.ppt</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/quiz/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/quiz/view.php?id=2306>Multiple 
+      Choice Quiz 10</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=4539>week10_lab2011.ppt</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/assignment/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/assignment/view.php?id=4540>Lab10-1: 
+      Optimizing Analysis</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/assignment/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/assignment/view.php?id=2307>Lab10-2: 
+      Profiling Lab</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=2375>Lab10_ 
+      solutions</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=4620>Optimizing 
+      Program Performance - Part 1</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=4621>Optimizing 
+      Program Performance - Part 2</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=4961>同学讲解week10Lab.rar</OPTION> 
+    </OPTGROUP> <OPTGROUP label="主题 11"> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=2372>slp_week11.ppt</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/quiz/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/quiz/view.php?id=2380>Multiple 
+      Choice Quiz 11</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/assignment/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/assignment/view.php?id=2381>Lab11: 
+      Memory Mountain</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=4962>同学讲解week11Lab.rar</OPTION> 
+    </OPTGROUP> <OPTGROUP label="主题 12"> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=2477>slp_week12.ppt</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/quiz/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/quiz/view.php?id=2479>Multiple 
+      Choice Quiz 12</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/assignment/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/assignment/view.php?id=2490>Lab12: 
+      Cache Lab</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=2663>solutions</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=4711>Introduction 
+      to Algorithms</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=4963>同学讲解week12Lab.rar</OPTION> 
+    </OPTGROUP> <OPTGROUP label="主题 13"> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=2569>slp-week13.ppt</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/quiz/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/quiz/view.php?id=2561>Multiple 
+      Choice Quiz 13</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=4944>week13Lab讲解</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/assignment/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/assignment/view.php?id=2562>Lab13: 
+      Linker Lab</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=4964>同学讲解week13Lab.rar</OPTION> 
+    </OPTGROUP> <OPTGROUP label="主题 14"> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=2672>slp-week14-1.ppt</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=4875>slp-week14-2</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=4876>week14_lab.ppt</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/quiz/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/quiz/view.php?id=2674>Multiple 
+      Choice Quiz 14</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/assignment/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/assignment/view.php?id=2675>Lab14: 
+      Exception and Process Lab</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=2686>Windows程序设计Programming.Windows.EN.chm</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=2703>多线程编程指南</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=4879>msdn</OPTION> 
+    </OPTGROUP> <OPTGROUP label="主题 15"> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=2746>slp-week15.ppt</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/quiz/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/quiz/view.php?id=2747>Multiple 
+      Choice Quiz 15</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/assignment/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/assignment/view.php?id=2748>Lab15: 
+      Concurrent Programming</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=2755>Example 
+      Code: EventObject.rar</OPTION> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=4947>slp_week15_lab.ppt</OPTION> 
+      <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=5000>week15lab-solution.rar</OPTION> 
+    </OPTGROUP> <OPTGROUP label="主题 16"> <OPTION 
+      style="BACKGROUND-IMAGE: url(http://swjx.scu.edu.cn/moodle/mod/resource/icon.gif)" 
+      value=http://swjx.scu.edu.cn/moodle/mod/resource/view.php?id=5001>甲骨文2011年ThinkQuest国际竞赛通知.rar</OPTION> 
+    </OPTGROUP></SELECT><INPUT type=hidden value=QPKK5vjE7n name=sesskey>
+  <DIV id=noscriptnavmenupopup style="DISPLAY: inline"><INPUT type=submit value=继续></DIV>
+  <SCRIPT type=text/javascript>
+//<![CDATA[
+document.getElementById("noscriptnavmenupopup").style.display = "none";
+//]]>
+</SCRIPT>
+  </DIV></FORM>
+  <LI>
+  <FORM onclick="this.target='_top';" 
+  action=http://swjx.scu.edu.cn/moodle/mod/resource/view.php>
+  <FIELDSET class=invisiblefieldset><INPUT type=hidden value=4953 
+  name=id><BUTTON title=下一个活动 type=submit><SPAN 
+  class="accesshide ">下一个活动&nbsp;</SPAN><SPAN 
+  class="arrow ">►</SPAN></BUTTON></FIELDSET></FORM></LI></UL></DIV></DIV></DIV>
+<DIV class="navbar clearfix">
+<DIV class=breadcrumb>
+<H2 class="accesshide ">您位于</H2>
+<UL>
+  <LI class=first><A onclick="this.target='_top'" 
+  href="http://swjx.scu.edu.cn/moodle/">软件课程</A>
+  <LI class=first><SPAN class="accesshide ">/&nbsp;</SPAN><SPAN 
+  class="arrow sep">►</SPAN> <A onclick="this.target='_top'" 
+  href="http://swjx.scu.edu.cn/moodle/course/view.php?id=49">系统级编程(System Level 
+  Programming) - 舒莉</A>
+  <LI class=first><SPAN class="accesshide ">/&nbsp;</SPAN><SPAN 
+  class="arrow sep">►</SPAN> <A onclick="this.target='_top'" 
+  href="http://swjx.scu.edu.cn/moodle/mod/assignment/index.php?id=49">作业</A>
+  <LI class=first><SPAN class="accesshide ">/&nbsp;</SPAN><SPAN 
+  class="arrow sep">►</SPAN> Lab02: Data Lab</LI></UL></DIV>
+<DIV class=navbutton></DIV></DIV><!-- END OF HEADER -->
+<DIV id=content>
+<DIV class=groupselector>分隔小组: 所有参与者</DIV>
+<DIV class=reportlink></DIV>
+<DIV class=clearer></DIV>
+<DIV class="box generalbox generalboxcontent boxaligncenter" id=intro>
+<P>
+<CENTER>
+<H1>Data Lab: Manipulating Bits</H1></CENTER><BR>
+<H2>Introduction</H2>The purpose of this assignment is to become more familiar 
+with bit-level representations and manipulations. You'll do this by solving a 
+series of programming ``puzzles.'' Many of these puzzles are quite artificial, 
+but you'll find yourself thinking much more about bits in working your way 
+through them and you will learn a lot about how computers represent integer 
+data.<BR>
+<H2>Getting Started</H2>Download and unzip <A 
+href="http://swjx.scu.edu.cn/moodle/file.php/49/systemlevelprogramming/week2/dlab-handout.zip"><KBD>dlab-handout.zip</KBD></A> 
+to a directory in which you plan to do your work. This will cause 12 files to be 
+unpacked into the directory:<BR>
+<P>
+<TABLE border=1>
+  <TBODY>
+  <TR>
+    <TD><KBD>bits.c</KBD></TD>
+    <TD>The data puzzles that you will solve. <B>This is the file you will be 
+      modifying and handing in.</B></TD></TR>
+  <TR>
+    <TD><KBD>dlab.dsw</KBD><BR><KBD>dlab.dsp</KBD></TD>
+    <TD>Project and workspace files.<BR></TD></TR>
+  <TR>
+    <TD><KBD>README</KBD></TD>
+    <TD>Helpful information about the lab<BR></TD></TR>
+  <TR>
+    <TD><KBD>btest.c</KBD><BR><KBD>btest.h</KBD><BR><KBD>decl.c</KBD><BR><KBD>test.c</KBD><BR><KBD>getopt.c</KBD><BR><KBD>bits.h</KBD><BR><KBD>getopt.h</KBD><BR><KBD>tailor.h</KBD></TD>
+    <TD>The test driver and its helper files<BR></TD></TR></TBODY></TABLE></P>
+<P></P>
+<P>Open the <KBD>dlab.dsw</KBD> workspace from VC++ and you are ready to begin 
+solving your puzzles. </P>
+<H2>Your Task</H2>
+<P>The only file you will be modifying and turning in is <KBD>bits.c</KBD>. 
+Looking at <KBD>bits.c</KBD> you'll notice a C structure called <KBD>info</KBD> 
+into which you should insert your name and login ID. Do this right away so you 
+don't forget, as the driver will not run without it. </P>
+<P>The <KBD>bits.c</KBD> file also contains a skeleton for each of the 10 
+programming puzzles. Your assignment is to complete each function skeleton using 
+only <I>straightline</I> code (i.e., no loops or conditionals) and a limited 
+number of C arithmetic and logical operators. Specifically, you are <I>only</I> 
+allowed to use the following eight operators: </P><PRE> ! ~ &amp; ^ | + &lt;&lt; &gt;&gt; </PRE>A few of the functions further 
+restrict this list. See the comments in <KBD>bits.c</KBD> for detailed rules and 
+a discussion of the desired coding style.<BR>
+<P></P>
+<P>The enclosed <KBD>dlab.dsw</KBD> workspace will help you compile your 
+<KBD>bits.c</KBD> file, along with the other helper functions, and link them all 
+together to form the executable driver program <KBD>btest.exe</KBD>. The 
+<KBD>btest.exe</KBD> driver program allows you to evaluate the functional 
+correctness of your code. Every time you modify one of the puzzles in 
+<KBD>bits.c</KBD>, you can check its correctness by rebuilding and rerunning 
+<KBD>btest.exe</KBD>. </P>
+<H2>Puzzles</H2>
+<P>The following table describes the 10 puzzles that you will be solving in 
+<KBD>bits.c</KBD>. The ``Rating'' field gives the difficulty rating (the number 
+of points) for the puzzle, and the ``Max ops'' field gives the maximum number of 
+operators you are allowed to use to implement each function. </P>
+<TABLE border=1>
+  <TBODY>
+  <TR>
+    <TD>Name<BR></TD>
+    <TD>Description<BR></TD>
+    <TD>Rating<BR></TD>
+    <TD>Max Ops<BR></TD></TR>
+  <TR>
+    <TD><KBD>bitAnd(x,y)</KBD></TD>
+    <TD>Returns <KBD>(x &amp; y)</KBD> using only <KBD>~</KBD> and 
+    <KBD>|</KBD></TD>
+    <TD>1<BR></TD>
+    <TD>8<BR></TD></TR>
+  <TR>
+    <TD><KBD>bitOr(x,y)</KBD></TD>
+    <TD>Returns <KBD>(x | y)</KBD> using only <KBD>~</KBD> and 
+    <KBD>&amp;</KBD></TD>
+    <TD>1<BR></TD>
+    <TD>8<BR></TD></TR>
+  <TR>
+    <TD><KBD>isZero(x)</KBD></TD>
+    <TD>Returns 1 if <KBD>x == 0</KBD> and 0 otherwise<BR></TD>
+    <TD>1<BR></TD>
+    <TD>2<BR></TD></TR>
+  <TR>
+    <TD><KBD>minusOne()</KBD></TD>
+    <TD>Returns a value of -1<BR></TD>
+    <TD>1<BR></TD>
+    <TD>2<BR></TD></TR>
+  <TR>
+    <TD><KBD>tmax()</KBD></TD>
+    <TD>Returns the maximum two's complement integer<BR></TD>
+    <TD>1<BR></TD>
+    <TD>4<BR></TD></TR>
+  <TR>
+    <TD><KBD>bitXor(x, y)</KBD></TD>
+    <TD>Returns <KBD>(x ^ y)</KBD> using only <KBD>~</KBD> and 
+    <KBD>&amp;</KBD></TD>
+    <TD>2<BR></TD>
+    <TD>14<BR></TD></TR>
+  <TR>
+    <TD><KBD>getByte(x)</KBD></TD>
+    <TD>Extract byte number <KBD>n</KBD> from word <KBD>x</KBD></TD>
+    <TD>2<BR></TD>
+    <TD>14<BR></TD></TR>
+  <TR>
+    <TD><KBD>isEqual(x,y)</KBD></TD>
+    <TD>Returns 1 if <KBD>x == y</KBD>, and 0 otherwise<BR></TD>
+    <TD>2<BR></TD>
+    <TD>5<BR></TD></TR>
+  <TR>
+    <TD><KBD>negate(x)</KBD></TD>
+    <TD>Returns <KBD>-x</KBD></TD>
+    <TD>2<BR></TD>
+    <TD>5<BR></TD></TR>
+  <TR>
+    <TD><KBD>isPositive(x)</KBD></TD>
+    <TD>Returns 1 if <KBD>x &gt; 0</KBD>, and 0 otherwise<BR></TD>
+    <TD>3<BR></TD>
+    <TD>8<BR></TD></TR></TBODY></TABLE>
+<UL>
+  <LI>Function <KBD>bitAnd</KBD> computes the <KBD>And</KBD> function. That is, 
+  when applied to arguments <KBD>x</KBD> and <KBD>y</KBD>, it returns <KBD>(x 
+  &amp; y)</KBD>. You may only use the operators <KBD>~</KBD> and <KBD>|</KBD>. 
+  <LI>Similarly, function <KBD>bitOr</KBD> computes the <KBD>Or</KBD> function. 
+  That is, when applied to arguments <KBD>x</KBD> and <KBD>y</KBD>, it returns 
+  <KBD>(x | y)</KBD>. You may only use the operators <KBD>~</KBD> and 
+  <KBD>&amp;</KBD>. 
+  <LI>A <I>predicate</I> is a function that returns either true or false. 
+  Function <KBD>isZero</KBD> is a predicate that returns a value of 1 (true) if 
+  <KBD>x</KBD> is equal to zero. Otherwise, it returns a value of 0 (false). 
+  <LI>Function <KBD>minusOne</KBD> takes no arguments and always returns a value 
+  of -1, without using the minus operator. 
+  <LI>Function <KBD>tmax</KBD>, which also takes no arguments, returns the 
+  largest positive two's complement number. 
+  <LI>Function <KBD>bitXor</KBD> should duplicate the behavior of the bitwise 
+  Xor operation <KBD>^</KBD>, using only the operations <KBD>&amp;</KBD> and 
+  <KBD>~</KBD>. 
+  <LI>Function <KBD>getByte</KBD> extracts a byte from a word and returns that 
+  byte. The bytes within a word are ordered from 0 (least significant) to 3 
+  (most significant). For example, <KBD>getByte(0x12345678,1) = 0x56</KBD>
+  <LI>Function <KBD>isEqual</KBD> compares <KBD>x</KBD> to <KBD>y</KBD> for 
+  equality, returning 1 (true) if <KBD>x == y</KBD> and 0 (false) otherwise. 
+  <LI>Function <KBD>negate</KBD> computes and returns the negative of its input 
+  argument <KBD>x</KBD>, without using the minus operator. 
+  <LI>Function <KBD>isPositive</KBD> is a predicate that returns 1 (true) if its 
+  input argument is greater than zero. Otherwise, it returns 0 (false). </LI></UL>
+<H2>Evaluation</H2>
+<P>Your score will be computed out of a maximum of 30 points based on the 
+following distribution: </P>
+<P>
+<TABLE border=1>
+  <TBODY>
+  <TR>
+    <TD>16<BR></TD>
+    <TD>Correctness of code as reported by <KBD>btest.exe</KBD><BR>(no credit 
+      for a puzzle if your instructor determines that you have used an illegal 
+      operator).<BR></TD></TR>
+  <TR>
+    <TD>10<BR></TD>
+    <TD>Performance of code, based on number of operators used in each 
+      function (maximum of 1 point per puzzle).<BR></TD></TR>
+  <TR>
+    <TD>4<BR></TD>
+    <TD>Style points, based on your instructor's subjective evaluation of the 
+      quality of your solutions and your comments.<BR></TD></TR></TBODY></TABLE></P>
+<P></P>
+<P>The 10 puzzles you must solve have been given a difficulty rating between 1 
+and 3, such that their weighted sum totals to 16. Your instructor will evaluate 
+your functions using the same <KBD>btest.exe</KBD> driver that you are using. 
+You will get full credit for a puzzle if it passes all of the tests performed by 
+<KBD>btest.exe</KBD>, half credit if it fails one test, and no credit otherwise. 
+You receive no credit if you use an illegal operator for your solution, so pay 
+close attention to the list of allowed operators for each puzzle in 
+<KBD>bits.c</KBD>. </P>
+<P>Regarding performance, our main concern at this point in the course is that 
+you can get the right answer. However, we want to instill in you a sense of 
+keeping things as short and simple as you can. Thus, for each function we've 
+established a maximum number of operators that you are allowed to use for each 
+function. This limit is very generous and is designed only to catch egregiously 
+inefficient solutions. You will receive one point for each function that 
+satisfies the operator limit. </P>
+<P>Finally, we've reserved four points for a subjective evaluation of the style 
+of your solutions and your commenting. Your solutions should be as clean and 
+straightforward as possible. Your comments should be informative, but they need 
+not be extensive. </P>
+<H2>Advice</H2>
+<UL>
+  <LI>Read the file <KBD>README</KBD> for information on running the 
+  <KBD>btest.exe</KBD> program. 
+  <LI>You'll find it helpful to work through the functions one at a time, 
+  testing each one as you go. You can use the <KBD>-f</KBD> flag to instruct 
+  <KBD>btest.exe</KBD> to test only a single function. For example, 
+  "<KBD>btest.exe -f bitAnd</KBD>". 
+  <LI>The "<KBD>-g</KBD>" flag is very handy for producing a concise summary of 
+  your correctness results. For example, "<KBD>btest -g</KBD>". 
+  <LI><KBD>btest.exe</KBD> is a console application, so you'll need to run it 
+  from the Windows command line. On a Windows 2000 system, you can find this at 
+  "Start-&gt;Accessories-&gt;Command Prompt". If you try to run it using 
+  "Start-&gt;Run.." instead, you won't see any of the output. </LI></UL>
+<H2>Hand In Instructions</H2>Before submitting your solution:<BR>
+<UL>
+  <LI>Make sure you have included your identifying information in your file 
+  <KBD>bits.c</KBD>. 
+  <LI>Remove any extraneous print statements that you might have included for 
+  debugging </LI></UL>
+<P></P></DIV>
+<DIV class="box generalbox generalboxcontent boxaligncenter" id=dates>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD class=c0>开始时间:</TD>
+    <TD class=c1>2011年09月8日 星期四 15:30</TD></TR>
+  <TR>
+    <TD class=c0>截止时间:</TD>
+    <TD class=c1>2011年09月 11日 星期日 23:55</TD></TR></TBODY></TABLE></DIV></DIV>
+<DIV id=footer>
+<DIV align=right><A title=四川大学·国家示范性软件学院 href="http://swjx.scu.edu.cn/"><IMG 
+style="WIDTH: 68px; HEIGHT: 66px" alt=四川大学·国家示范性软件学院 
+src="系统级编程(System Level Programming) - 舒莉 作业 Lab02 Data Lab.files/footer.gif"></A></DIV>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD bgColor=#ffa600 height=6></TD></TR>
+  <TR>
+    <TD bgColor=#ffffff height=2></TD></TR>
+  <TR>
+    <TD class=footbg align=middle height=30>﻿四川大学·国家示范性软件学院</TD></TR>
+  <TR>
+    <TD bgColor=#ffffff 
+height=2></TD></TR></TBODY></TABLE></DIV></DIV></BODY></HTML>
