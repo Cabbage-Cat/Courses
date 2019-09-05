@@ -14,9 +14,9 @@
 info_struct info =
 {
    /* Replace with your full name */
-   "",
+   "常家奇",
    /* Replace with your login ID */
-   "",
+   "2017141493004",
 };
 
 #if 0
