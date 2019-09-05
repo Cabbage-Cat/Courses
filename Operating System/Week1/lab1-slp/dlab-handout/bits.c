@@ -114,7 +114,7 @@ NOTES AND HINTS:
  */
 int bitAnd(int x, int y) {
 
-  return 2;
+  return 1;
 
 }
 
