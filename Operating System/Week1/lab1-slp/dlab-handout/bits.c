@@ -113,8 +113,11 @@ NOTES AND HINTS:
  *   Rating: 1
  */
 int bitAnd(int x, int y) {
-
-  return 1;
+  int nX = ~x;
+  int nY = ~y;
+  int nRes = nX | nY;
+  int res = ~nRes;
+  return res;
 
 }
 
@@ -131,8 +134,11 @@ int bitAnd(int x, int y) {
  *   Rating: 1
  */
 int bitOr(int x, int y) {
-
-  return 2;
+  int nX = ~x;
+  int nY = ~y;
+  int nRes = nX & nY;
+  int res = ~nRes;
+  return res;
 
 }
 
@@ -149,8 +155,8 @@ int bitOr(int x, int y) {
  *   Rating: 1
  */
 int isZero(int x) {
-
-  return 2;
+  int nRes = x^0;
+  return ~nRes;
 
 }
 
@@ -166,8 +172,7 @@ int isZero(int x) {
  *   Rating: 1
  */
 int minusOne(void) {
-
-  return 2;
+  return ~0;
 
 }
 
@@ -184,7 +189,7 @@ int minusOne(void) {
  */
 int tmax(void) {
 
-  return 2;
+  return ~0;
 
 }
 
@@ -202,9 +207,14 @@ int tmax(void) {
  *   Rating: 2
  */
 int bitXor(int x, int y) {
-
-  return 2;
-
+  int nx = ~x;
+  int ny = ~y;
+  int nv1 = x&ny;
+  int nv2 = nx&y;
+  int v1 = ~nv1;
+  int v2 = ~nv2;
+  int nres = v1&v2;
+  return ~nres;
 }
 
 
@@ -222,8 +232,9 @@ int bitXor(int x, int y) {
  */
 int getByte(int x, int n) {
 
-  return 2;
-
+  int mvstep = n << 3;
+  x = x >> mvstep;
+  return x & 0x11;
 }
 
 
@@ -240,7 +251,8 @@ int getByte(int x, int n) {
  */
 int isEqual(int x, int y) {
 
-  return 2;
+  int nres = x^y;
+  return ~nres;
 
 }
 
@@ -258,7 +270,7 @@ int isEqual(int x, int y) {
  */
 int negate(int x) {
 
-  return 2;
+  return ~x+1;
 
 }
 
@@ -276,7 +288,9 @@ int negate(int x) {
  */
 int isPositive(int x) {
 
-  return 2;
+  int sgn = x >> 31;
+
+  return ~sgn;
 
 }
 
