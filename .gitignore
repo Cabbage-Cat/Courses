@@ -32,10 +32,10 @@
 *.app
 
 //.gitignore
-*.pptx
-*.ppt
-*.doc
-*.docx
+//*.pptx
+//*.ppt
+//*.doc
+//*.docx
 *.dsp
 *.dsw
 *.zip
