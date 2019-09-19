@@ -1,0 +1,17 @@
+C语言中文网成立于 2012 年初，目前已经运营了将近 5 年，我们致力于分享精品教程，帮助对编程感兴趣的读者。
+
+我们一直都在坚持的是：认认真真、一丝不苟、以工匠的精神来打磨每一套教程，让读者感受到作者的用心，以及默默投入的时间，由衷地心动和点赞。这样的教程是一件作品，而不是呆板的文字！
+
+坚持做好一件事情，做到极致，让自己感动，让用户心动，这就是足以传世的作品！
+
+几年来，我们累计编写的教程包括：
+C语言入门教程：http://c.biancheng.net/cpp/u/jiaocheng/
+C语言和内存：http://c.biancheng.net/cpp/u/c20/
+C语言模块化开发：http://c.biancheng.net/cpp/u/c16/
+C语言项目实践：http://c.biancheng.net/cpp/u/xiangmu/
+C++教程：http://c.biancheng.net/cpp/biancheng/cpp/rumen/
+Java教程：http://www.weixueyuan.net/java/rumen/
+Windows编程入门：http://c.biancheng.net/cpp/windows/
+Linux简明教程：http://c.biancheng.net/cpp/linux/
+Shell简明教程：http://c.biancheng.net/cpp/shell/
+Socket教程：http://c.biancheng.net/cpp/socket/
