@@ -1,0 +1,16 @@
+What is the relationship between a use case and a quality attribute scenario?
+
+质量属性场景从一小个方面来描述用例.我们可以用不同的质量属性场景来描述用例,(易用性,可修改性,安全性..)
+,同时,用例是面向最终客户的,语言要尽可能通俗易懂.
+
+If you wanted to add quality attribute information to a use case, how would you do it?
+
+首先确定我们需要的质量属性 Ex: 性能质量属性,安全质量属性,易用性质量属性.然后我们分别为每一种
+质量属性确定各自的质量属性场景:
+1. 刺激
+2. 刺激源
+3. 环境
+4. 结构
+5. 响应
+6. 响应度量
+即可.

@@ -1,0 +1,9 @@
+1.
+ - Ending edge of `str` has been overridden. ('\0')
+ - Ending edge of `ilist` has been overridden( size2*sizeof(int) instead of size2)
+ It has not free the memory.
+2.
+ - If newstr is "1",checkIf1 will just return 1 and not free the memory.
+3.
+ - In `mergeSingleIfDifferent`:  If strcmp(s1,s2)==0, just let str point to NULL,
+ this will make memory leak.
