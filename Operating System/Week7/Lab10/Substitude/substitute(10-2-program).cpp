@@ -1,6 +1,6 @@
 /* substitute -- substitute strings in a list of files
 
-  This program operates on a set of files listed on
+  This program operates on a set of files listed on 
   the command line. The first file specifies a list of
   string substitutions to be performed on the remaining
   files. The list of string substitutions has the form:
@@ -10,7 +10,7 @@
   ...
 
   If a string contains a double quote character or
-  a backslash character, escape the character with
+  a backslash character, escape the character with 
   backslash: "\"" denotes the string with one double
   quote character. "\\" contains one backslash.
   Each file is searched for instances of "string 1".
@@ -23,15 +23,15 @@
   the originals when you run this program.
 */
 
-#include <afx.h>
+#include "afx.h"
 #include "iostream.h"
 
 // parse a quoted string from buffer
 // return final index in string
-int parse1(CString* buffer, int start, CString* str)
+int parse1(CString *buffer, int start, CString *str)
 {
 	// look for initial quote:
-	int i = buffer->Find("\"", start);
+    int i = buffer->Find("\"", start);
 	if (i != -1) {
 		// copy to result string
 		str->Empty();
@@ -45,8 +45,7 @@ int parse1(CString* buffer, int start, CString* str)
 				if ((*buffer)[i] != 0) {
 					str->Insert(j++, CString((*buffer)[i]));
 				}
-			}
-			else if ((*buffer)[i] == '\"') {
+			} else if ((*buffer)[i] == '\"') {
 				return i + 1;
 			}
 			str->Insert(j++, CString((*buffer)[i]));
@@ -59,7 +58,7 @@ int parse1(CString* buffer, int start, CString* str)
 
 // parse two quoted strings from buffer; return false on failure
 //
-bool parse(CString* buffer, CString* pattern, CString* replacement)
+bool parse(CString *buffer, CString *pattern, CString *replacement)
 {
 	int start = parse1(buffer, 0, pattern);
 	if (start < 0) {
@@ -71,26 +70,25 @@ bool parse(CString* buffer, CString* pattern, CString* replacement)
 
 
 
-void substitute(CString* data, CString* pattern, CString* replacement)
+void substitute(CString *data, CString *pattern, CString *replacement)
 {
 	int loc;
 	// find every occurrence of pattern:
 	for (loc = data->Find(*pattern, 0); loc >= 0;
-		loc = data->Find(*pattern, 0)) {
-		// delete the pattern string from loc:
+		 loc = data->Find(*pattern, 0)) {
+	    // delete the pattern string from loc:
 		data->Delete(loc, pattern->GetLength());
 		// insert each character of the replacement string:
 		for (int i = 0; i < replacement->GetLength(); i++) {
-			data->Insert(loc + i, (*replacement)[i]);
-		}
+			data->Insert(loc + i, (*replacement)[i]);}
 	}
 }
 
 
 
-void do_substitutions(CString* data, CString* subs_filename)
+void do_substitutions(CString *data, CString *subs_filename)
 {
-	TRY{
+	TRY {
 		CStdioFile file(*subs_filename, CFile::modeRead);
 		while (true) {
 			CString buffer;   // holds line from file
@@ -101,28 +99,27 @@ void do_substitutions(CString* data, CString* subs_filename)
 			if (buffer.GetLength() == 0) break;
 			if (parse(&buffer, &pattern, &replacement)) {
 				substitute(data, &pattern, &replacement);
+			} else {
+				cout << "Bad pattern/replacement line: " << buffer << endl;
+				return;
 			}
- else {
-  cout << "Bad pattern/replacement line: " << buffer << endl;
-  return;
-}
-}
+		}	
 	}
-		CATCH(CFileException, e) {
+	CATCH(CFileException, e ) {
 		cout << "File could not be opened or read " << e->m_cause << endl;
 	}
 	END_CATCH
 }
 
 
-void process_file(CString* filename, CString* subs_filename)
+void process_file(CString *filename, CString *subs_filename)
 {
 	// read in filename to a CString
-	TRY{
+	TRY {   
 		CFile file(*filename, CFile::modeRead);
 		int size = file.GetLength();
 		// read the data, allocate more than we need
-		char* data = new char[size + 16];
+		char *data = new char[size + 16];
 		file.Read(data, size);
 		// files are not zero-terminated but string should be:
 		data[size] = 0;
@@ -137,9 +134,9 @@ void process_file(CString* filename, CString* subs_filename)
 		file.SetLength(content.GetLength());
 		file.Close();
 	}
-		CATCH(CFileException, e) {
-		cout << "File could not be opened or read " <<
-			e->m_cause << " " << *filename << endl;
+	CATCH(CFileException, e ) {
+		cout << "File could not be opened or read " << 
+			    e->m_cause << " " << *filename << endl;
 	}
 	END_CATCH
 
@@ -148,13 +145,12 @@ void process_file(CString* filename, CString* subs_filename)
 
 
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	if (argc < 3) {
 		cout << "Not enough input arguments" << endl;
 		cout << "Usage: substitute subs-file src1 src2 ..." << endl;
-	}
-	else {
+	} else {
 		CString subs_filename(argv[1]);
 		for (int i = 2; i < argc; i++) {
 			CString filename(argv[i]);
