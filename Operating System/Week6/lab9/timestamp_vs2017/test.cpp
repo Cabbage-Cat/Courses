@@ -24,14 +24,15 @@
 */
 
 #include <afx.h>
-#include "iostream.h"
+#include <iostream>
 
+using namespace std;
 // parse a quoted string from buffer
 // return final index in string
 int parse1(CString* buffer, int start, CString* str)
 {
 	// look for initial quote:
-	int i = buffer->Find("\"", start);
+	int i = buffer->Find('\"', start);
 	if (i != -1) {
 		// copy to result string
 		str->Empty();
