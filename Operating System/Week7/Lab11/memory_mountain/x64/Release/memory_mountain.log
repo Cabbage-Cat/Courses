@@ -1,0 +1,13 @@
+﻿  tsc.cpp
+F:\Courses\Operating System\Week7\Lab11\memory_mountain\tsc.cpp(20,2): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+F:\Courses\Operating System\Week7\Lab11\memory_mountain\tsc.cpp(22,3): error C2065: 'pushfd': undeclared identifier
+F:\Courses\Operating System\Week7\Lab11\memory_mountain\tsc.cpp(23,3): error C2146: syntax error: missing ';' before identifier 'mov'
+F:\Courses\Operating System\Week7\Lab11\memory_mountain\tsc.cpp(23,3): error C2065: 'mov': undeclared identifier
+F:\Courses\Operating System\Week7\Lab11\memory_mountain\tsc.cpp(23,7): error C2146: syntax error: missing ';' before identifier 'eax'
+F:\Courses\Operating System\Week7\Lab11\memory_mountain\tsc.cpp(23,7): error C2065: 'eax': undeclared identifier
+F:\Courses\Operating System\Week7\Lab11\memory_mountain\tsc.cpp(23,16): error C3481: 'esp': lambda capture variable not found
+F:\Courses\Operating System\Week7\Lab11\memory_mountain\tsc.cpp(24,7): error C3260: 'identifier': skipping unexpected token(s) before lambda body
+F:\Courses\Operating System\Week7\Lab11\memory_mountain\tsc.cpp(65,2): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+F:\Courses\Operating System\Week7\Lab11\memory_mountain\tsc.cpp(66,3): error C2065: 'rdtsc': undeclared identifier
+F:\Courses\Operating System\Week7\Lab11\memory_mountain\tsc.cpp(76,2): error C2143: syntax error: missing ';' before '}'
+F:\Courses\Operating System\Week7\Lab11\memory_mountain\tsc.cpp(82,1): fatal error C1004: unexpected end-of-file found

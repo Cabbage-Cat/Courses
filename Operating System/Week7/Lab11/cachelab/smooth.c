@@ -16,10 +16,13 @@ void smooth(int dim, pixel *src, pixel *dst) {
 	}
 	for(j=1; j<dim-1;j++) {
 		COPY(&dst[PIXEL(0,j,dim)], &src[PIXEL(0,j,dim)]);
-		COPY(&dst[PIXEL(dim-1,j,dim)], &src[PIXEL(dim-1,j,dim)]);
 	}
-	for(i=1; i<dim-1; i++) {
-		for(j=1; j<dim-1; j++) {
+	for (j = 1; j < dim - 1; j++) {
+		COPY(&dst[PIXEL(dim - 1, j, dim)], &src[PIXEL(dim - 1, j, dim)]);
+	}
+	int div = 3;
+	for(j=1; j<dim-1; j++) {
+		for(i=1; i<dim-1; i++) {
 			SMOOTH(&dst[PIXEL(j,i,dim)],
 					&src[PIXEL(j,i,dim)],
 					&src[PIXEL(j-1,i,dim)],

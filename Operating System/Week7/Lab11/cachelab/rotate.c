@@ -7,14 +7,15 @@
 /* Here is an our naive implementation */
 char rotate_descr[] = "Naive Row-wise Traversal of src";
 void rotate(int dim, pixel *src, pixel *dst) {
-	int i, j;
-
-	for(i=0; i < dim; i++) {
+	int i, j,k,l;
+	int div = 4;
+	for(i=0; i < dim; i+=div) {
 		for(j=0; j < dim; j++) {
-			COPY(&dst[PIXEL(dim-1-j,i,dim)], &src[PIXEL(i,j,dim)]);
+			for (k=i;k<i+div;k++)
+				//for (l=j;l<j+div;l++)
+					COPY(&dst[PIXEL(dim-1-j,k,dim)], &src[PIXEL(k,j,dim)]);
 		}
 	}
-
 	return;
 }
 
