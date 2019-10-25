@@ -1,0 +1,21 @@
+# Microsoft Developer Studio Generated Dependency File, included by exercise5.mak
+
+.\cache.c : \
+	".\cache.h"\
+	".\defs.h"\
+	
+
+.\driver.c : \
+	".\cache.h"\
+	".\defs.h"\
+	
+
+.\rotate.c : \
+	".\cache.h"\
+	".\defs.h"\
+	
+
+.\smooth.c : \
+	".\cache.h"\
+	".\defs.h"\
+	

@@ -1,0 +1,41 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: exercise5 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\pyam\LOCALS~1\Temp\RSP164.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/exercise5.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Documents and Settings\pyam\My Documents\2002Summer\SSD6\CacheLab\exercise5\cache.c"
+"C:\Documents and Settings\pyam\My Documents\2002Summer\SSD6\CacheLab\exercise5\driver.c"
+"C:\Documents and Settings\pyam\My Documents\2002Summer\SSD6\CacheLab\exercise5\rotate.c"
+"C:\Documents and Settings\pyam\My Documents\2002Summer\SSD6\CacheLab\exercise5\smooth.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\pyam\LOCALS~1\Temp\RSP164.tmp" 
+Creating temporary file "C:\DOCUME~1\pyam\LOCALS~1\Temp\RSP165.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/exercise5.pdb" /debug /machine:I386 /out:"Debug/exercise5.exe" /pdbtype:sept 
+".\Debug\cache.obj"
+".\Debug\driver.obj"
+".\Debug\rotate.obj"
+".\Debug\smooth.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\pyam\LOCALS~1\Temp\RSP165.tmp"
+<h3>Output Window</h3>
+Compiling...
+cache.c
+driver.c
+rotate.c
+smooth.c
+Linking...
+
+
+
+<h3>Results</h3>
+exercise5.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
