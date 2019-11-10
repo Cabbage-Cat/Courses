@@ -1,0 +1,81 @@
+ 
+1. A technique in which a process, executing an application, is divided into threads that can run concurrently is called:(1.0分)
+A.Symmetric multiprocessing (SMP)
+B.Multiprocessing
+C.Multithreading
+D.None of the above
+2. Which of the following major line of computer system development created problems in timing and synchronization that contributed to the development of the concept of the process?(1.0分)
+A.Time sharing systems
+B.Multiprogramming batch operation systems
+C.Real time transaction systems
+D.All of the above
+3. Operating systems must evolve over time because(1.0分)
+A.New hardware is designed and implemented in the computer system
+B.Users will only purchase software that has a current copyright date
+C.Hardware must be replaced when it fails
+D.All of the above
+4. The principle objective of a time sharing, multiprogramming system is to(1.0分)
+A.Maximize processor use
+B.Maximize response time
+C.Provide exclusive access to hardware
+D.None of the above
+5. A computer hardware feature that is vital to the effective operation of a multiprogramming operating system is:(1.0分)
+A.Very large memory
+B.I/O interrupts and DMA
+C.Multiple processors
+D.All of the above
+6. An example of a hardware feature that is desirable in a batch-processing system is(1.0分)
+A.Privileged instructions
+B.Large clock cycles
+C.A completely accessible memory area
+D.None of the above
+7. The operating system is unusual in it’s role as a control mechanism, in that:(1.0分)
+A.It never relinquishes control of the system processor
+B.It frequently relinquishes control of the system processor and must depend on the processor to regain control of the system
+C.It runs on a special processor, completely separated from the rest of the system
+D.None of the above
+8. A primary objective of an operating system is:(1.0分)
+A.Efficiency
+B.Convenience
+C.Ability to evolve
+D.All of the above
+9. WIN2K supports several types of user applications, including:(1.0分)
+A.System 10
+B.Linux
+C.WIN32
+D.None of the above
+10. The operating system provides many types of services to end-users, programmers and system designers, including:(1.0分)
+A.Error detection and response
+B.Built-in user applications
+C.Relational database capabilities with the internal file system
+D.All of the above
+11. A common problem with full-featured operating systems, due to their size and difficulty of the tasks they address, is:(1.0分)
+A.Latent bugs that show up in the field
+B.Chronically late in delivery
+C.Sub-par performance
+D.All of the above
+12. Key to the success of Linux has been it’s character as a free software package available under the auspices of the:(1.0分)
+A.World Wide Web Consortium
+B.Berkeley Software Distribution
+C.Free Software Foundation
+D.None of the above
+13. Which of the following major line of computer system development created problems in timing and synchronization that contributed to the development of the concept of the process?(1.0分)
+A.Real time transaction systems
+B.Time sharing systems
+C.Multiprogramming batch operation systems
+D.All of the above
+14. A major problem with early serial processing systems was:(1.0分)
+A.Lack of input devices
+B.Setup time
+C.Inability to get hardcopy output
+D.All of the above
+15. Relative to information protection and security in computer systems, access control typically refers to:(1.0分)
+A.The flow of data within the system
+B.Proving that security mechanisms perform according to specification
+C.Regulating user and process access to various aspects of the system
+D.None of the above
+16. The paging system in a memory management system provides for dynamic mapping between a virtual address used in a program and:(1.0分)
+A.A virtual address in main memory
+B.A real address in a program
+C.A real address in main memory
+D.None of the above
