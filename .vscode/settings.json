@@ -1,7 +1,8 @@
 {
   "files.associations": {
     "stack": "cpp",
-    "ostream": "cpp"
+    "ostream": "cpp",
+    "cstddef": "cpp"
   },
   //"C_Cpp.errorSquiggles": "Enabled"
 }

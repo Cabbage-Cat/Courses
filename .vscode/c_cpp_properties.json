@@ -4,6 +4,7 @@
             "name": "Linux",
             "includePath": [
                 "/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/include/",
+                "/home/carrot/Courses/Alg Lecture/Lab03/lib/StanfordCPPLib",
                 "/usr/include/c++",
                 "${workspaceFolder}/**"
             ],

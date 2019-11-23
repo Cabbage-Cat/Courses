@@ -1,14 +1,24 @@
-typedef unsigned char uchar;
-typedef unsigned int uint;
-const unsigned int NUM_CHARS = 255;
-typedef struct {
-  uint char_num;
-  uchar freqs[NUM_CHARS];
-}file_header;
+#ifndef _huffman_node_h
+#define _huffman_node_h
 
-typedef struct huffman_node{
-  char ch;
-  uint val;
-  struct huffman_node* self,*left,*right;
-}huffman_node;
+#include <cstddef>
+#include <iomanip>
+#include <iostream>
+#include <sstream>
+#include <string>
+#include "bitstream.h"
+using namespace std;
 
+struct huffman_node{
+  int character;
+  int count;
+  huffman_node* zero; //left
+  huffman_node* one; //right
+  huffman_node(int character=NOT_A_CHAR,int count=0,huffman_node* zero=NULL,huffman_node* one=NULL);
+  bool is_leaf() const;
+  string to_string() const;
+};
+
+
+
+#endif
