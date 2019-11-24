@@ -2,7 +2,8 @@
   "files.associations": {
     "stack": "cpp",
     "ostream": "cpp",
-    "cstddef": "cpp"
+    "cstddef": "cpp",
+    "iosfwd": "cpp"
   },
   //"C_Cpp.errorSquiggles": "Enabled"
 }
