@@ -1,0 +1,73 @@
+//读写锁实现读者写者互斥
+#include <stdio.h>
+#include <pthread.h>
+
+pthread_rwlock_t readlock;
+pthread_rwlock_t writelock;
+int CountReader = 0;
+int CountWriter = 0;
+
+void *read(){
+	printf("this is read thread\n");
+	
+	//再来一个读者时，为读进程加锁，读者数加1，开始读
+	pthread_rwlock_rdlock(&readlock);
+	CountReader++;
+	printf("第%d个读者\n", CountReader);
+
+	if(CountReader > 0){//如果读者大于0，写进程加锁
+		pthread_rwlock_wrlock(&writelock);
+	}
+
+	//若有读者读完，读者未离开，解锁	
+	pthread_rwlock_unlock(&readlock);
+	printf("第%d个读者读完\n", CountReader);
+	
+	//某个读者确实离开，执行读者减1操作
+	pthread_rwlock_rdlock(&readlock);
+	CountReader--;
+
+	if(CountReader == 0){//如果读者都离开了，为写进程解锁
+		pthread_rwlock_unlock(&writelock);
+	}
+	
+	//在读进程中，都进程随时解锁
+	pthread_rwlock_unlock(&readlock);
+}
+
+void *write(){
+	printf("this is write thread\n");
+	//当有写者在写文件时，读者不能进行读操作，并且其他读写者也阻塞，不能同时进行写操作
+	pthread_rwlock_wrlock(&writelock);
+	CountWriter++;
+	printf("第%d个写者\n", CountWriter);
+	if(CountWriter > 0){
+		pthread_rwlock_rdlock(&readlock);
+	}
+	printf("第%d个写者写完\n", CountWriter);
+	CountWriter--;
+	if(CountWriter == 0){
+		pthread_rwlock_unlock(&readlock);
+		pthread_rwlock_unlock(&writelock);
+	}
+}
+
+int main()
+{
+	// 创建两个线程实现一个线程读文件，一个线程写文件
+	pthread_t tid[2];
+
+	pthread_rwlock_init(&readlock, NULL);
+	pthread_rwlock_init(&writelock, NULL);
+
+	pthread_create(&tid[0], NULL, read, NULL);
+	pthread_create(&tid[1], NULL, write, NULL);
+
+	pthread_join(tid[0], NULL);
+	pthread_join(tid[1], NULL);
+
+	pthread_rwlock_destroy(&readlock);
+	pthread_rwlock_destroy(&writelock);
+
+	return 0;
+}

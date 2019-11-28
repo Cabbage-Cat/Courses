@@ -1,0 +1,43 @@
+//使用信号量实现
+#include <stdio.h>
+#include <pthread.h>
+#include <semaphore.h>
+
+int n = 10;
+int sum = 0;
+double average = 0;
+sem_t sem; //定义信号量，非负整数
+
+void *sum_n(){
+	printf("execute sum\n");
+	int i;
+	for(i = 1; i <= n; i++){
+		sum += i;
+	}
+	sem_post(&sem); //公共资源增加，增加信号量
+}
+
+void *average_n(){
+	sem_wait(&sem); //使用公共资源，减少信号量
+	printf("execute average\n");
+	average = (double)sum / n;
+}
+
+int main()
+{
+	sem_init(&sem, 0, 0);	 //信号量初始化，第一个参数代表信号量对象，
+			//第二个参数知名信号量的类型，不为0时此信号量在进程间共享，否则只能为当前进程的所有线程共享。
+			//指定信号量值的大小
+
+	pthread_t tid[2]; //定义线程变量组
+	pthread_create(&tid[0], NULL, sum_n, NULL);
+	pthread_create(&tid[1], NULL, average_n, NULL);
+
+	pthread_join(tid[0], NULL);
+	pthread_join(tid[1], NULL);
+
+	printf("sum = %d\n", sum);
+	printf("average = %lf\n", average);
+	
+	return 0;
+}

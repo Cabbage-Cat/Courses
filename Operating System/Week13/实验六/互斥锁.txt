@@ -1,0 +1,90 @@
+//一个线程计算n个数的和，一个线程根据和求平均数
+#include <stdio.h>
+#include <pthread.h>
+
+int n = 10;
+int sum = 0;
+double average = 0;
+
+void *sum_n(){
+	printf("execute sum\n");
+	int i;
+	for(i = 1; i <= n; i++){
+		sum += i;
+	}
+}
+
+void *average_n(){
+	printf("execute average\n");
+	average = (double)sum / n;
+}
+
+int main()
+{
+	pthread_t tid[2];
+	pthread_create(&tid[0], NULL, sum_n, NULL);
+	pthread_create(&tid[1], NULL, average_n, NULL);
+
+	pthread_join(tid[0], NULL);
+	pthread_join(tid[1], NULL);
+
+	printf("sum = %d\n", sum);
+	printf("average = %lf\n", average);
+	
+	return 0;
+}
+
+//实现同步功能
+#include <stdio.h>
+#include <pthread.h>
+
+int n = 10;
+int sum = 0;
+double average = 0;
+pthread_mutex_t mutex1;
+pthread_mutex_t mutex2;
+
+void *sum_n(){
+	pthread_mutex_lock(&mutex1);//加锁，阻碍求平均数线程
+	printf("execute sum\n");
+	int i;
+	for(i = 1; i <= n; i++){
+		sum += i;
+	}
+	pthread_mutex_unlock(&mutex2);//解锁	
+}
+
+void *average_n(){
+	pthread_mutex_lock(&mutex2);//加锁，
+	printf("execute average\n");
+	average = (double)sum / n;
+	pthread_mutex_unlock(&mutex1);//解锁
+}
+
+int main()
+{
+	pthread_t tid[2];
+	
+	//初始化两个互斥锁
+	pthread_mutex_init(&mutex1,NULL);
+	pthread_mutex_init(&mutex2,NULL);
+	
+	//对mutex2进行加锁，使求平均数线程调用pthread_mutex_lock函数阻塞，保证先计算和
+	pthread_mutex_lock(&mutex2);
+
+	//创建两个线程
+	pthread_create(&tid[0], NULL, sum_n, NULL);
+	pthread_create(&tid[1], NULL, average_n, NULL);
+
+	//等待线程结束函数
+	pthread_join(tid[0], NULL);
+	pthread_join(tid[1], NULL);
+
+	printf("sum = %d\n", sum);
+	printf("average = %lf\n", average);
+	
+	//线程销毁
+	pthread_mutex_destroy(&mutex1);
+	pthread_mutex_destroy(&mutex2);
+	return 0;
+}
