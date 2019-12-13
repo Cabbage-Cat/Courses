@@ -32,6 +32,9 @@ int get_vertex_id(vertex& v,std::map<vertex,int>& map){
   return map[v];
 }
 
+/*
+  Suppose always return vertex object.
+*/
 vertex& get_vertex(int idx,std::map<int,vertex>& map){
   return map[idx];
 }
@@ -39,6 +42,11 @@ vertex& get_vertex(int idx,std::map<int,vertex>& map){
 
 
 int V;
+void init(){
+  for (int i=0;i<maxv;i++)
+    for (int j=0;j<maxv;j++)
+      cost[i][j] = 1e7;
+}
 void dijkstra(int s){
   for (int i=0;i<V;i++) d[i] = 10000000;
   std::fill(used,used+V,false);
