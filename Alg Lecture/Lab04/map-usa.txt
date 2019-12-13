@@ -21,7 +21,7 @@ Las Vegas;104;216
 Kansas City;334;193
 Bismarck;279;63
 Augusta;593;65
-56
+57
 San Francisco;Los Angeles;320
 Los Angeles;San Francisco;320
 San Francisco;Portland;350
@@ -38,7 +38,8 @@ New York;Washington, D.C.;210
 Minneapolis;Chicago;350
 Oklahoma City;Dallas;220
 Oklahoma City;Kansas City;250
-Las Vegas;Phoenix;230;true
+Las Vegas;Phoenix;230
+Phoenix;Las Vegas;230
 Los Angeles;Phoenix;350
 Washington, D.C.;Raleigh;200
 Raleigh;Washington, D.C.;200
@@ -78,3 +79,5 @@ Chicago;Atlanta;530
 Kansas City;New Orleans;580
 Dallas;Atlanta;660
 Atlanta;Dallas;660
+Seattle
+Washington, D.C.
