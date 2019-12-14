@@ -79,5 +79,3 @@ Chicago;Atlanta;530
 Kansas City;New Orleans;580
 Dallas;Atlanta;660
 Atlanta;Dallas;660
-Seattle
-Washington, D.C.
